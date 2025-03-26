@@ -188,7 +188,7 @@ def generate_realistic_network_conditions():
 
 def add_task_attributes(predefined_tasks, num_edge_nodes, complexity_range, data_intensity_range, task_type_weights= None):
     if task_type_weights is None:
-        task_type_weights = {'compute': 0.3, 'data': 0.3, 'balanced': 0.4}
+        task_type_weights = {'compute': 0.1, 'data': 0.8, 'balanced': 0.1}
 
     for task in predefined_tasks:
         task.task_type = random.choices(list(task_type_weights.keys()), weights=list(task_type_weights.values()))[0]
